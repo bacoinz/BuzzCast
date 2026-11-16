@@ -1,12 +1,48 @@
-# BuzzCast
+<div align="center">
 
-Turn any phone into a Buzz! quiz controller for **PCSX2** (PS2) and **RPCS3** (PS3) — local or remote via Cloudflare Tunnel + Discord/Parsec streaming. Players open a browser, pick a slot (1–8) and tap the buttons — just like the real plastic buzzers. Supports up to **8 players** (7 on RPCS3).
+<img src="docs/screenshots/cover.png" alt="BuzzCast: every phone becomes a Buzz! buzzer" width="100%">
 
-BuzzCast runs on the host PC, serves a web app on the local network, and emulates a **keyboard**. The emulator can't tell the difference from a real keyboard — you just map each Buzz pad to the keys below.
+**Turn any phone into a Buzz! buzzer for PCSX2 and RPCS3.**<br>
+Up to 8 players join from their browser — on the same WiFi or online through a Cloudflare tunnel. No app, no pairing.
 
-**Available for Windows, macOS and Linux** — a single standalone download per OS, no installs needed.
+<a href="https://github.com/bacoinz/buzzcast/releases/latest"><img src="https://img.shields.io/github/v/release/bacoinz/buzzcast?style=flat-square&labelColor=120821&color=ffd23f&label=release" alt="Latest release"></a> <a href="https://github.com/bacoinz/buzzcast/releases"><img src="https://img.shields.io/github/downloads/bacoinz/buzzcast/total?style=flat-square&labelColor=120821&color=ffd23f" alt="Downloads"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffd23f?style=flat-square&labelColor=120821" alt="License: MIT"></a> <img src="https://img.shields.io/badge/emulators-PCSX2%20%C2%B7%20RPCS3-ffd23f?style=flat-square&labelColor=120821&logo=playstation&logoColor=white" alt="PCSX2 and RPCS3"> <img src="https://img.shields.io/badge/platforms-Windows%20%C2%B7%20macOS%20%C2%B7%20Linux-ffd23f?style=flat-square&labelColor=120821" alt="Windows, macOS, Linux"> <img src="https://img.shields.io/badge/runtime-Bun-ffd23f?style=flat-square&labelColor=120821&logo=bun&logoColor=white" alt="Built with Bun"> <a href="https://ko-fi.com/bacoinz"><img src="https://img.shields.io/badge/Ko--fi-support%20BuzzCast-ffd23f?style=flat-square&labelColor=120821&logo=kofi&logoColor=white" alt="Support BuzzCast on Ko-fi"></a>
 
-<img width="437" height="250" alt="imagem" src="https://github.com/user-attachments/assets/e0903380-6361-4574-a71b-a85bf7dc6c76" /> <img width="165" height="250" alt="imagem" src="https://github.com/user-attachments/assets/ec173812-8fc7-45ef-a14b-ae9235709bf4" /> <img width="119" height="250" alt="imagem" src="https://github.com/user-attachments/assets/1cc24d16-a335-4153-baa7-f4b8474e7f6b" />
+[Download](https://github.com/bacoinz/buzzcast/releases/latest) · [Getting started](#getting-started) · [Emulator setup](#emulator-setup) · [Troubleshooting](#troubleshooting) · [Changelog](CHANGELOG.md) · [☕ Ko-fi](https://ko-fi.com/bacoinz)
+
+</div>
+
+## Why BuzzCast
+
+The Buzz! games are some of the best party games ever made — but they need the plastic buzzers, which are hard to find, and only work for people in the same room.
+
+BuzzCast replaces them with the phones everyone already has. It runs on the PC with the emulator, serves a small web app, and turns each tap into a **keyboard key** — the emulator can't tell it apart from a real keyboard. Players scan a QR code, pick a slot and play; friends far away join through a Cloudflare tunnel while you stream the game on Discord or Parsec.
+
+**Available for Windows, macOS and Linux** — one standalone download per OS, nothing else to install.
+
+## Screenshots
+
+<div align="center">
+
+<img src="docs/screenshots/phones.png" alt="Phone lobby and controller" width="80%">
+
+<sub>On the phone: pick a free slot, then buzz in and answer.</sub>
+
+<img src="docs/screenshots/host.png" alt="Host page with QR code and live player latency" width="100%">
+
+<sub>On the PC: the host page — QR code to join, local or online, live latency for every player, Keybinds, emulator instructions.</sub>
+
+<table>
+<tr>
+<td><img src="docs/screenshots/instr.png" alt="Emulator setup popup with ready-made profiles"></td>
+<td><img src="docs/screenshots/keybinds.png" alt="Keybinds editor"></td>
+</tr>
+<tr>
+<td align="center"><sub>Emulator setup — ready-made PCSX2 / RPCS3 profiles</sub></td>
+<td align="center"><sub>Keybinds — change any key and test each button live</sub></td>
+</tr>
+</table>
+
+</div>
 
 ---
 
@@ -252,6 +288,14 @@ Known caveats: Linux is **X11-only** (Wayland not supported) and needs `libxtst6
 BuzzCast is released under the [MIT License](LICENSE).
 
 BuzzCast is an unofficial fan project, not affiliated with or endorsed by Sony Interactive Entertainment. *Buzz!* is a trademark of Sony Interactive Entertainment; PCSX2 and RPCS3 belong to their respective projects.
+
+---
+
+## Support
+
+BuzzCast is free and open source. If it made your party night better, you can buy me a coffee — it keeps the project going. ☕
+
+<a href="https://ko-fi.com/bacoinz"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi"></a>
 
 ---
 

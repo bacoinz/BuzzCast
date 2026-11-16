@@ -305,6 +305,10 @@ async function hostPage() {
     /* Pill buttons (Keybinds + Instructions) */
     .pill-btn { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; color: rgba(255,255,255,0.8); font-size: clamp(0.7rem,1.1vw,0.85rem); font-weight: 600; padding: 5px 12px; text-decoration: none; cursor: pointer; transition: background 0.15s; white-space: nowrap; font-family: inherit; }
     .pill-btn:hover { background: rgba(255,255,255,0.16); }
+    /* Ko-fi support button (official Ko-fi blue + cup logo) */
+    .kofi-btn { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(180deg,#7fb0ff,#5a8fe8); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; color: #fff; font-size: clamp(0.7rem,1.1vw,0.85rem); font-weight: 800; padding: 5px 13px 5px 10px; text-decoration: none; white-space: nowrap; box-shadow: 0 3px 0 #3f6cbf, 0 6px 14px rgba(90,143,232,0.35); transition: transform 0.08s, box-shadow 0.08s, filter 0.15s; }
+    .kofi-btn:hover { filter: brightness(1.08); }
+    .kofi-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #3f6cbf, 0 3px 8px rgba(90,143,232,0.3); }
     /* Keybinds modal */
     .modal-overlay { position: fixed; inset: 0; background: rgba(5,2,12,0.82); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 200; padding: 3vh 2vw; }
     .modal-overlay.show { display: flex; }
@@ -374,6 +378,7 @@ async function hostPage() {
       <div class="lang-row">
         <button class="pill-btn" id="kb-btn" onclick="openKeybinds()">🎮 <span id="kb-btn-label"></span></button>
         <button class="pill-btn" id="instr-btn" onclick="openInstructions()">📋 <span id="instr-btn-label"></span></button>
+        <a class="kofi-btn" href="https://ko-fi.com/bacoinz" target="_blank" rel="noopener" title="ko-fi.com/bacoinz"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#fff" d="M2.5 6h14.5v7.5a5.5 5.5 0 0 1-5.5 5.5h-3.5a5.5 5.5 0 0 1-5.5-5.5z"/><path fill="none" stroke="#fff" stroke-width="2.2" d="M17 8.5h1.6a2.9 2.9 0 0 1 0 5.8h-1.6"/><path fill="#ff5e5b" d="M9.75 16c-3.6-2.5-3.9-5.4-1.9-5.9.9-.2 1.6.3 1.9.9.3-.6 1-1.1 1.9-.9 2 .5 1.7 3.4-1.9 5.9z"/></svg><span id="kofi-btn-label"></span></a>
         <button class="flag-btn" data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
         <button class="flag-btn" data-lang="pt" onclick="setLang('pt')" title="Português">🇵🇹</button>
       </div>
@@ -430,8 +435,8 @@ async function hostPage() {
 
   <script>
     const HOST_T = {
-      en: { title:"How to join", s1:"Connect to the <strong>same WiFi</strong> as this PC.", s2:"Open your phone camera and scan the <strong>QR code →</strong>", s3:"Pick a free slot and enter your name.", s4:"Press the buttons and <strong>play!</strong>", tab_local:"Local", tab_remote:"Remote", tunnel_starting:"⏳ Starting tunnel…", not_found:"Cloudflared wasn't detected in your system, would you like to install? You can remove it later.", install_btn:"Install (≈35 MB)", installing:"Downloading cloudflared…", install_error:"Install failed:", retry_btn:"Retry", kb_btn:"Keybinds", instr_btn:"Emulator Instructions", kb_title:"Keybinds", kb_hint:"Click a key field and press the key you want · click a button to test it", kb_save:"Save", kb_back:"Back", kb_reset:"Reset defaults", kb_save_error:"Couldn't save keybinds:", instr_title:"Emulator Setup", instr_close:"Close", update_text:v=>"New version "+v+" available!", update_btn:"Download" },
-      pt: { title:"Como entrar", s1:"Liga-te à <strong>mesma rede WiFi</strong> que este PC.", s2:"Aponta a câmara do telemóvel ao <strong>código QR →</strong>", s3:"Escolhe o teu lugar e escreve o teu nome.", s4:"Carrega nos botões e <strong>joga!</strong>", tab_local:"Local", tab_remote:"Remoto", tunnel_starting:"⏳ A iniciar túnel…", not_found:"O Cloudflared não foi detetado no sistema. Deseja instalar? Pode removê-lo mais tarde.", install_btn:"Instalar (≈35 MB)", installing:"A transferir cloudflared…", install_error:"Erro na instalação:", retry_btn:"Tentar novamente", kb_btn:"Teclas", instr_btn:"Instruções do emulador", kb_title:"Configurar Teclas", kb_hint:"Clica num campo e prime a tecla que queres · clica num botão para testar", kb_save:"Guardar", kb_back:"Voltar", kb_reset:"Repor predefinições", kb_save_error:"Não foi possível guardar as teclas:", instr_title:"Configurar o emulador", instr_close:"Fechar", update_text:v=>"Nova versão "+v+" disponível!", update_btn:"Transferir" }
+      en: { title:"How to join", s1:"Connect to the <strong>same WiFi</strong> as this PC.", s2:"Open your phone camera and scan the <strong>QR code →</strong>", s3:"Pick a free slot and enter your name.", s4:"Press the buttons and <strong>play!</strong>", tab_local:"Local", tab_remote:"Remote", tunnel_starting:"⏳ Starting tunnel…", not_found:"Cloudflared wasn't detected in your system, would you like to install? You can remove it later.", install_btn:"Install (≈35 MB)", installing:"Downloading cloudflared…", install_error:"Install failed:", retry_btn:"Retry", kb_btn:"Keybinds", instr_btn:"Emulator Instructions", kofi_btn:"Support me on Ko-fi", kb_title:"Keybinds", kb_hint:"Click a key field and press the key you want · click a button to test it", kb_save:"Save", kb_back:"Back", kb_reset:"Reset defaults", kb_save_error:"Couldn't save keybinds:", instr_title:"Emulator Setup", instr_close:"Close", update_text:v=>"New version "+v+" available!", update_btn:"Download" },
+      pt: { title:"Como entrar", s1:"Liga-te à <strong>mesma rede WiFi</strong> que este PC.", s2:"Aponta a câmara do telemóvel ao <strong>código QR →</strong>", s3:"Escolhe o teu lugar e escreve o teu nome.", s4:"Carrega nos botões e <strong>joga!</strong>", tab_local:"Local", tab_remote:"Remoto", tunnel_starting:"⏳ A iniciar túnel…", not_found:"O Cloudflared não foi detetado no sistema. Deseja instalar? Pode removê-lo mais tarde.", install_btn:"Instalar (≈35 MB)", installing:"A transferir cloudflared…", install_error:"Erro na instalação:", retry_btn:"Tentar novamente", kb_btn:"Teclas", instr_btn:"Instruções do emulador", kofi_btn:"Apoia-me no Ko-fi", kb_title:"Configurar Teclas", kb_hint:"Clica num campo e prime a tecla que queres · clica num botão para testar", kb_save:"Guardar", kb_back:"Voltar", kb_reset:"Repor predefinições", kb_save_error:"Não foi possível guardar as teclas:", instr_title:"Configurar o emulador", instr_close:"Fechar", update_text:v=>"Nova versão "+v+" disponível!", update_btn:"Transferir" }
     };
     function getLang() { return localStorage.getItem("buzz_lang") || "en"; }
     function setLang(l) { localStorage.setItem("buzz_lang", l); location.reload(); }
@@ -447,6 +452,7 @@ async function hostPage() {
       document.getElementById("tab-remote").textContent = t.tab_remote;
       document.getElementById("kb-btn-label").textContent = t.kb_btn;
       document.getElementById("instr-btn-label").textContent = t.instr_btn;
+      document.getElementById("kofi-btn-label").textContent = t.kofi_btn;
       document.getElementById("kb-title").textContent = t.kb_title;
       document.getElementById("kb-hint").textContent = t.kb_hint;
       document.getElementById("kb-save").textContent = t.kb_save;
