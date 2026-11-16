@@ -285,9 +285,7 @@ Known caveats: Linux is **X11-only** (Wayland not supported) and needs `libxtst6
 
 ## License
 
-BuzzCast is released under the [MIT License](LICENSE).
-
-BuzzCast is an unofficial fan project, not affiliated with or endorsed by Sony Interactive Entertainment. *Buzz!* is a trademark of Sony Interactive Entertainment; PCSX2 and RPCS3 belong to their respective projects.
+BuzzCast's source code is released under the [MIT License](LICENSE). The license covers BuzzCast's own code only — see the [disclaimer](#disclaimer) below for the *Buzz!* name, logo and artwork.
 
 ---
 
@@ -300,3 +298,17 @@ BuzzCast is free and open source. If it made your party night better, you can bu
 ---
 
 Built with [Bun](https://bun.sh).
+
+---
+
+## Disclaimer
+
+BuzzCast is an **unofficial, free, non-commercial fan project**. It is not affiliated with, endorsed, sponsored or approved by Sony Interactive Entertainment, the developers of the *Buzz!* games, or the PCSX2 and RPCS3 projects.
+
+- ***Buzz!*, the *Buzz!* logo and all related names, artwork and imagery are trademarks and/or copyrighted works of Sony Interactive Entertainment or their respective owners.** The author of BuzzCast does not own them and claims no rights over them.
+- The BuzzCast logo and the buzzer graphics are based on the *Buzz!* branding. They are used in good faith, only to identify the games this tool works with, with no intent to infringe any rights or to suggest an official connection.
+- The MIT License applies **only to BuzzCast's own source code**. It grants no rights to the *Buzz!* name, logo or artwork. PCSX2, RPCS3, PlayStation and all other trademarks belong to their respective owners.
+- BuzzCast does not include or distribute any games, BIOS files or other copyrighted game content. You need your own legally obtained copies.
+- The software is provided "as is", without warranty of any kind (see the [LICENSE](LICENSE)).
+
+If you hold rights to any of this material and want it changed or removed, please [open an issue](https://github.com/bacoinz/buzzcast/issues) and it will be taken care of promptly.

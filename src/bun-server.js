@@ -273,6 +273,7 @@ async function hostPage() {
     .flag-btn { background: none; border: 2px solid transparent; cursor: pointer; font-size: clamp(1.1rem, 2vw, 1.6rem); padding: 3px 6px; border-radius: 8px; opacity: 0.4; transition: opacity 0.15s, border-color 0.15s; line-height: 1; }
     .flag-btn:hover { opacity: 0.8; }
     .flag-btn.active { opacity: 1; border-color: rgba(255,255,255,0.3); }
+    .flag-btn svg { display: block; height: clamp(16px, 1.8vw, 22px); width: auto; border-radius: 3px; }
     .close-btn { position: fixed; top: 20px; right: 24px; width: clamp(48px, 5vw, 64px); height: clamp(48px, 5vw, 64px); border-radius: 50%; border: none; background: radial-gradient(circle at 50% 35%, #ff3b3b, #c1121f 65%, #8e0d18 100%); box-shadow: 0 5px 0 #6e0a12, 0 8px 18px rgba(0,0,0,0.5); color: #fff; font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.08s, box-shadow 0.08s; z-index: 100; line-height: 1; }
     .close-btn:active { transform: translateY(4px); box-shadow: 0 1px 0 #6e0a12, 0 3px 8px rgba(0,0,0,0.4); }
     .right { display: flex; flex-direction: column; align-items: center; gap: 2vh; flex-shrink: 0; }
@@ -379,8 +380,8 @@ async function hostPage() {
         <button class="pill-btn" id="kb-btn" onclick="openKeybinds()">🎮 <span id="kb-btn-label"></span></button>
         <button class="pill-btn" id="instr-btn" onclick="openInstructions()">📋 <span id="instr-btn-label"></span></button>
         <a class="kofi-btn" href="https://ko-fi.com/bacoinz" target="_blank" rel="noopener" title="ko-fi.com/bacoinz"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#fff" d="M2.5 6h14.5v7.5a5.5 5.5 0 0 1-5.5 5.5h-3.5a5.5 5.5 0 0 1-5.5-5.5z"/><path fill="none" stroke="#fff" stroke-width="2.2" d="M17 8.5h1.6a2.9 2.9 0 0 1 0 5.8h-1.6"/><path fill="#ff5e5b" d="M9.75 16c-3.6-2.5-3.9-5.4-1.9-5.9.9-.2 1.6.3 1.9.9.3-.6 1-1.1 1.9-.9 2 .5 1.7 3.4-1.9 5.9z"/></svg><span id="kofi-btn-label"></span></a>
-        <button class="flag-btn" data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
-        <button class="flag-btn" data-lang="pt" onclick="setLang('pt')" title="Português">🇵🇹</button>
+        <button class="flag-btn" data-lang="en" onclick="setLang('en')" title="English"><svg viewBox="0 0 60 30" width="36" height="18" aria-hidden="true"><clipPath id="uk-s"><path d="M0,0v30h60V0z"/></clipPath><clipPath id="uk-t"><path d="M30,15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(#uk-s)"><path d="M0,0v30h60V0z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></g></svg></button>
+        <button class="flag-btn" data-lang="pt" onclick="setLang('pt')" title="Português"><svg viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="12" height="20" fill="#046a38"/><rect x="12" width="18" height="20" fill="#da291c"/><circle cx="12" cy="10" r="3.6" fill="none" stroke="#ffe900" stroke-width="1.4"/><path d="M10.3 8.2h3.4v2.6a1.7 1.7 0 0 1-3.4 0z" fill="#fff" stroke="#da291c" stroke-width="0.6"/></svg></button>
       </div>
     </div>
     <div class="right">

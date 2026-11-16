@@ -136,6 +136,7 @@ body.lobby {
 
 .flag-btn:hover { opacity: 0.75; }
 .flag-btn.active { opacity: 1; border-color: rgba(255,255,255,0.3); }
+.flag-btn svg { display: block; height: 18px; width: auto; border-radius: 3px; }
 
 /* ─── Controlador ────────────────────────────────────── */
 body.controller {
